@@ -22,7 +22,8 @@ import Menu from '../assets/menu.svg'
                     <Image src={Instagram} alt="Instagram" class="size-6" />
                     <span class="w-20">Instagram</span>
                 </a>
-                <h1 class="text-2xl font-thin uppercase">escanea y paga</h1>
+
+                <h1 class="text-xl mt-14 font-semibold uppercase text-center">escanea y paga <br /> con nequi</h1>
                 <div class="relative p-2 my-4">
                     <div class="border-qr"></div>
                     <div class="border-qr"></div>
@@ -37,25 +38,25 @@ import Menu from '../assets/menu.svg'
 
 <style>
 .border-qr:nth-child(1) {
-    @apply absolute p-10 transform rotate-180 -top-2 -left-2;
+    @apply absolute p-8 md:p-10 transform rotate-180 -top-2 -left-2;
     border-width: 0 6px 6px 0;
 }
 
 .border-qr:nth-child(2) {
     content: '';
-    @apply absolute p-10 transform rotate-90 -bottom-2 -left-2;
+    @apply absolute p-8 md:p-10 transform rotate-90 -bottom-2 -left-2;
     border-width: 0 6px 6px 0;
 }
 
 
 .border-qr:nth-child(3) {
-    @apply absolute p-10 transform -rotate-90 -top-2 -right-2;
+    @apply absolute p-8 md:p-10 transform -rotate-90 -top-2 -right-2;
     border-width: 0 6px 6px 0;
 }
 
 .border-qr:nth-child(4) {
     content: '';
-    @apply absolute p-10 transform  -bottom-2 -right-2;
+    @apply absolute p-8 md:p-10 transform  -bottom-2 -right-2;
     border-width: 0 6px 6px 0;
 }
 
