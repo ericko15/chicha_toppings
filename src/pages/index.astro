@@ -1,35 +1,35 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import {Image} from 'astro:assets'
-import Fondo from '../assets/fondo.jpg'
+import Fondo from '../assets/fondo.png'
 import QR from '../assets/QR.jpg'
 import Logo from '../assets/logo.png'
-import Instagram from '../assets/instagram.svg'
-import Menu from '../assets/menu.svg'
+import Instagram from '../components/icons/Instagram.astro'
+import Menu from '../components/icons/Menu.astro'
 ---
 
-<Layout title="ELIPAV">
+<Layout title="Chicha Toppings">
 	<main class="h-screen max-w-screen-sm mx-auto md:px-4 md:py-10">
-        <div class="h-full bg-gray-600 w-full rounded-lg shadow-xl relative">
-            <Image src={Fondo} alt="Fondo" class="h-full w-full object-cover rounded-lg absolute z-10 filter brightness-50" />
-            <div class="z-20 relative h-full flex justify-center items-center text-white flex-col gap-2">
+        <div class="h-full w-full rounded-lg shadow-xl relative">
+            <Image src={Fondo} alt="Fondo" class="h-full w-full object-cover rounded-lg absolute" />
+            <div class="z-20 relative h-full flex justify-center items-center  flex-col gap-2">
                 <Image src={Logo} alt="Logo" class="size-48 md:size-60" />
-                <a href="/menu.pdf" target="_blank" class="w-full max-w-56 px-3 py-2 rounded bg-white text-black flex justify-center items-center gap-2">
-                    <Image src={Menu} alt="Instagram" class="size-6" />
+                <a href="/menu.pdf" target="_blank" class="w-full max-w-56 px-3 py-2 rounded bg-[#d18397] text-white flex justify-center items-center gap-2">
+                    <Menu class="size-6" />
                     <span class="w-20">Menu</span>
                 </a>
-                <a href="https://www.instagram.com/elipavgmts/" target="_blank" class="w-full max-w-56 px-3 py-2 rounded bg-white text-black flex justify-center items-center gap-2">
-                    <Image src={Instagram} alt="Instagram" class="size-6" />
+                <a href="https://www.instagram.com/elipavgmts/" target="_blank" class="w-full max-w-56 px-3 py-2 rounded bg-[#d18397] text-white flex justify-center items-center gap-2">
+                    <Instagram class="size-6" />
                     <span class="w-20">Instagram</span>
                 </a>
 
-                <h1 class="text-xl mt-14 font-semibold uppercase text-center">escanea y paga <br /> con nequi</h1>
+                <h1 class="text-xl mt-14 font-semibold uppercase text-center">escanea y paga <br/> con nequi</h1>
                 <div class="relative p-2 my-4">
                     <div class="border-qr"></div>
                     <div class="border-qr"></div>
                     <div class="border-qr"></div>
                     <div class="border-qr"></div>
-                    <Image src={QR} alt="QR" class="size-40 md:size-52" />
+                    <Image src={QR} alt="QR" class="size-40 md:size-52 rounded-lg " />
                 </div>
             </div>
         </div>
@@ -40,24 +40,28 @@ import Menu from '../assets/menu.svg'
 .border-qr:nth-child(1) {
     @apply absolute p-8 md:p-10 transform rotate-180 -top-2 -left-2;
     border-width: 0 6px 6px 0;
+    border-color: rgba(209, 131, 151, 0.25);
 }
 
 .border-qr:nth-child(2) {
     content: '';
     @apply absolute p-8 md:p-10 transform rotate-90 -bottom-2 -left-2;
     border-width: 0 6px 6px 0;
+    border-color: rgba(209, 131, 151, 0.25);
 }
 
 
 .border-qr:nth-child(3) {
     @apply absolute p-8 md:p-10 transform -rotate-90 -top-2 -right-2;
     border-width: 0 6px 6px 0;
+    border-color: rgba(209, 131, 151, 0.25);
 }
 
 .border-qr:nth-child(4) {
     content: '';
     @apply absolute p-8 md:p-10 transform  -bottom-2 -right-2;
     border-width: 0 6px 6px 0;
+    border-color: rgba(209, 131, 151, 0.25);
 }
 
 </style>
